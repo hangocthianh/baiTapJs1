@@ -4,7 +4,6 @@
 // Khối 1: Có số tiền lương mỗi ngày và số ngày làm việc
 // Khối 2:
 // - Tạo và lấy giá trị 2 biến số tiền lương mỗi ngày (salaryDay)và số ngày làm việc (workDay)
-// - Chuyển thành số bằng hàm Number()
 // - Tính tiền lương (salary) = tiền lương mỗi ngày (salaryDay) * số ngày (workDay)
 // - Hiện ra kết quả tiền lương
 // Khối 3: Tiền lương
@@ -12,7 +11,7 @@
 function salary(){
     var salaryDay = document.getElementById("salaryPerDay").value;
     var workDay = document.getElementById("workDayNumber").value;
-    var salary = (Number(salaryDay) * Number(workDay)).toLocaleString('en');
+    var salary = (salaryDay * workDay).toLocaleString('en');
     document.getElementById("salaryMoney").innerHTML = salary;
 }
 document.getElementById("btnSalary").onclick = salary;
@@ -53,7 +52,7 @@ document.getElementById("btnAverage").onclick = average;
 function exchange(){
     var usdMoney = document.getElementById("usdMoney").value;
     const exchangeRate = 23500;
-    var vndMoney = (Number(usdMoney) * exchangeRate).toLocaleString('en');
+    var vndMoney = (usdMoney * exchangeRate).toLocaleString('en');
     document.getElementById("vndMoney").innerHTML = vndMoney;
 }
 document.getElementById("btnExchange").onclick = exchange;
@@ -64,7 +63,6 @@ document.getElementById("btnExchange").onclick = exchange;
 // Khối 1: Có chiều dài và chiều rộng
 // Khối 2: 
 // - Tạo và lấy giá trị chiều dài (length) và chiều rộng (width)
-// - Chuyển thành số bằng hàm Number()
 // - Tính diện tích (area) = chiều dài (length)* chiều rộng (width)
 // - Tính chu vi (perimeter)= (chiều dài (length) + chiều rộng (width))*2
 // - Hiện ra kết qủa diện tích chu vi
@@ -74,7 +72,7 @@ document.getElementById("btnExchange").onclick = exchange;
 function rectangle(){
     var length = document.getElementById("length").value;
     var width = document.getElementById("width").value;
-    var area = Number(length) * Number(width);
+    var area = length * width;
     var perimeter = (Number(length) + Number(width))*2;
     document.getElementById("area").innerHTML = area;
     document.getElementById("perimeter").innerHTML = perimeter;
@@ -88,7 +86,6 @@ document.getElementById("btnRec").onclick = rectangle;
 // Khối 2: 
 // - tạo và tính giá số hàng chục (ten) = phần nguyên của phép chia n/10
 // - tạo và tính số hàng đơn vị (unit) = n%10
-// - chuyển thành số bằng hàm Number()
 // - tổng 2 ký số (sum) = số hàng chục (ten) + số hàng đơn vị (unit)
 // - hiện ra tổng (sum)
 // Khối 3: tổng 2 ký số
